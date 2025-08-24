@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>סל הקניות • Noemie</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="banner">
+      <div class="logo-area">
+        <a href="index.html" class="logo" aria-label="Noemie">N</a>
+        <div class="brand">
+          <div class="brand-name">Noemie</div>
+          <div class="brand-tagline">תיקים מבית היוצר Noemie</div>
+        </div>
+      </div>
+      <div class="cart-area">
+        <a class="cart-link" href="cart.html" aria-label="צפייה בסל הקניות">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.41c-.16.28-.25.61-.25.96 0 1.11.9 2 2 2h10v-2h-10l1.1-2h6.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1h-14.31l-.94-2zm0 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm10 0c-1.11 0-2 .9-2 2s.89 2 2 2 2-.9 2-2-.89-2-2-2z"/></svg>
+          <span id="cart-count" class="cart-count">0</span>
+        </a>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html" class="nav-link">בית</a>
+      <a href="about.html" class="nav-link">אודות</a>
+      <a href="products.html" class="nav-link">מוצרים</a>
+      <a href="contact.html" class="nav-link">צור קשר</a>
+    </nav>
+  </header>
+  <main class="content">
+
+<section class="page-title"><h1>סל הקניות</h1></section>
+<section class="cart">
+  <div id="cart-empty" class="text-block" hidden>
+    הסל שלך ריק. <a href="products.html">להמשך קניות</a>
+  </div>
+  <div id="cart-table-wrap" class="table-wrap" hidden>
+    <table class="cart-table">
+      <thead>
+        <tr>
+          <th>מוצר</th>
+          <th>מחיר</th>
+          <th>כמות</th>
+          <th>סה״כ</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="cart-rows"></tbody>
+    </table>
+    <div class="cart-summary">
+      <div class="summary-line"><span>סכום ביניים</span><span id="subtotal">₪0</span></div>
+      <div class="summary-line"><span>משלוח</span><span id="shipping">₪0</span></div>
+      <div class="summary-total"><span>סכום סופי</span><span id="grand">₪0</span></div>
+      <div class="summary-actions">
+        <a class="btn outline" href="products.html">המשך קניות</a>
+        <a class="btn primary" href="checkout.html">המשך לקופה</a>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  window.addEventListener('DOMContentLoaded', renderCartPage);
+</script>
+  </main>
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Noemie — כל הזכויות שמורות.</p>
+  </footer>
+</body>
+</html>
